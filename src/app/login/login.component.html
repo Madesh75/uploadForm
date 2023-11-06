@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header text-center">
+            Login
+          </div>
+          <div class="card-body">
+            <form [formGroup]="loginForms" (ngSubmit)="loggedin()">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email" class="form-control"
+                  placeholder="Enter your email">
+                <div class="form-text text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+                  Email is Required
+                </div>
+                <div class="form-text text-danger" *ngIf="email.errors?.['pattern'] && (email.touched || email.dirty)">
+                  Invalid Email
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" formControlName="password" class="form-control"
+                  placeholder="Enter your password" maxlength="8">
+                <div class="form-text text-danger"
+                  *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">Password is Required
+                </div>
+                <div class="form-text text-danger"
+                  *ngIf="password.errors?.['minlength'] && (password.touched || password.dirty)">Password Must have 8
+                  characters
+                </div>
+              </div>
+              <div class="mb-3"></div>
+  
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+              <div class="form-text text-danger" *ngIf="loginForms.invalid && submitted">Please provide required fields
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
