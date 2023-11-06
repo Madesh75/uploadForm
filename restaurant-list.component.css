@@ -1,0 +1,41 @@
+/* restaurant-list.component.css
+
+/* Center align the card content */
+.card {
+    text-align: center;
+  }
+  
+  /* Add some spacing between cards */
+  .card {
+    margin: 10px;
+  }
+  
+  /* Style the card title */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Add some padding to the card body */
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* Style the "Order Now" button */
+  .btn-primary {
+    background-color: #f44336; /* Red color */
+    border: none;
+  }
+  
+  /* Change the color of the button on hover */
+  .btn-primary:hover {
+    background-color: #3d2fd3; /* Darker red on hover */
+    color: #fff; /* White text on hover */
+  }
+  
+  /* Customize the container background */
+  .container {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+  }
